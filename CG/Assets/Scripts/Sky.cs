@@ -124,7 +124,7 @@ namespace Ocean
 
             //Transmittance is responsible for the change in the sun color as it moves
             //The raw file is a 2D array of 32 bit floats with a range of 0 to 1
-            string path = Application.dataPath + "/Textures/transmittance.raw";
+            string path = Application.dataPath + "/Resources/Textures/transmittance.raw";
 
 			ComputeBuffer buffer = new ComputeBuffer(TRANSMITTANCE_WIDTH*TRANSMITTANCE_HEIGHT, sizeof(float)*TRANSMITTANCE_CHANNELS);
 			CBUtility.WriteIntoRenderTexture(m_transmittance, TRANSMITTANCE_CHANNELS, path, buffer, writeData);
@@ -132,7 +132,7 @@ namespace Ocean
 
             //Iirradiance is responsible for the change in the sky color as the sun moves
             //The raw file is a 2D array of 32 bit floats with a range of 0 to 1
-            path = Application.dataPath + "/Textures/irradiance.raw";
+            path = Application.dataPath + "/Resources/Textures/irradiance.raw";
 
 			buffer = new ComputeBuffer(IRRADIANCE_WIDTH*IRRADIANCE_HEIGHT, sizeof(float)*IRRADIANCE_CHANNELS);
 			CBUtility.WriteIntoRenderTexture(m_irradiance, IRRADIANCE_CHANNELS, path, buffer, writeData);
@@ -142,7 +142,7 @@ namespace Ocean
             //The raw file is a 4D array of 32 bit floats with a range of 0 to 1.589844
             //As there is not such thing as a 4D texture the data is packed into a 2D texture 
             //and the shader manually performs the sample for the 3rd and 4th dimension
-            path = Application.dataPath + "/Textures/inscatter.raw";
+            path = Application.dataPath + "/Resources/Textures/inscatter.raw";
 
 			buffer = new ComputeBuffer(INSCATTER_WIDTH*INSCATTER_HEIGHT*INSCATTER_DEPTH, sizeof(float)*INSCATTER_CHANNELS);
 			CBUtility.WriteIntoRenderTexture(m_inscatter, INSCATTER_CHANNELS, path, buffer, writeData);
