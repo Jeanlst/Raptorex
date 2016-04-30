@@ -1,0 +1,489 @@
+fileFormatVersion: 2
+guid: 9ca9f9c4e0e515d4b9a339ec7e20522b
+timeCreated: 1462044181
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Camera
+    100002: Cilindro
+    100004: Cilindro.000
+    100006: Cilindro.001
+    100008: Cilindro.002
+    100010: Cilindro.003
+    100012: Cilindro.004
+    100014: Cilindro.006
+    100016: Cilindro.007
+    100018: Cilindro.008
+    100020: Cilindro.009
+    100022: Cilindro.010
+    100024: Cilindro.011
+    100026: Cilindro.012
+    100028: Cilindro.013
+    100030: Cilindro.014
+    100032: Cliff
+    100034: Cliff_MeshPart0
+    100036: Cliff_MeshPart1
+    100038: Cliff_MeshPart2
+    100040: Cone
+    100042: Cone.000
+    100044: Cone.001
+    100046: Cone.002
+    100048: Cone.003
+    100050: Cone.004
+    100052: Cone.005
+    100054: Cone.006
+    100056: Cone.007
+    100058: Cone.008
+    100060: Cone.009
+    100062: Cone.010
+    100064: Cone.011
+    100066: Cone.012
+    100068: Cube
+    100070: Cube.002
+    100072: Cube.003
+    100074: Cube.004
+    100076: Cube.005
+    100078: Cubo
+    100080: Cubo.001
+    100082: Cubo.002
+    100084: Cubo.003
+    100086: Cubo.004
+    100088: Cubo.005
+    100090: Cubo.006
+    100092: Cubo.008
+    100094: Cubo.009
+    100096: Cubo.010
+    100098: Cubo.011
+    100100: Cubo.012
+    100102: Cubo.013
+    100104: Cubo.014
+    100106: Cubo.015
+    100108: Cubo.016
+    100110: Cubo.019
+    100112: Cylinder.007
+    100114: Cylinder.010
+    100116: "C\xEDrculo"
+    100118: "C\xEDrculo.003"
+    100120: Lamp
+    100122: Lamp.003
+    100124: Lamp.004
+    100126: mini-torre
+    100128: muro
+    100130: pano
+    100132: parte de cima do muro
+    100134: Plano
+    100136: Plano.001
+    100138: Plano.002
+    100140: Plano.003
+    100142: Ponto
+    100144: Ponto.001
+    100146: //RootNode
+    100148: torre 1.000
+    100150: torre 1.001
+    100152: torre 1.002
+    100154: torre 1.003
+    100156: torre 1.004
+    100158: torre 1.005
+    100160: torre 1.006
+    100162: torre 1.007
+    100164: torre2
+    100166: Torus.000
+    100168: Torus.001
+    100170: Torus.002
+    100172: Torus.003
+    100174: Torus.004
+    100176: Torus.006
+    400000: Camera
+    400002: Cilindro
+    400004: Cilindro.000
+    400006: Cilindro.001
+    400008: Cilindro.002
+    400010: Cilindro.003
+    400012: Cilindro.004
+    400014: Cilindro.006
+    400016: Cilindro.007
+    400018: Cilindro.008
+    400020: Cilindro.009
+    400022: Cilindro.010
+    400024: Cilindro.011
+    400026: Cilindro.012
+    400028: Cilindro.013
+    400030: Cilindro.014
+    400032: Cliff
+    400034: Cliff_MeshPart0
+    400036: Cliff_MeshPart1
+    400038: Cliff_MeshPart2
+    400040: Cone
+    400042: Cone.000
+    400044: Cone.001
+    400046: Cone.002
+    400048: Cone.003
+    400050: Cone.004
+    400052: Cone.005
+    400054: Cone.006
+    400056: Cone.007
+    400058: Cone.008
+    400060: Cone.009
+    400062: Cone.010
+    400064: Cone.011
+    400066: Cone.012
+    400068: Cube
+    400070: Cube.002
+    400072: Cube.003
+    400074: Cube.004
+    400076: Cube.005
+    400078: Cubo
+    400080: Cubo.001
+    400082: Cubo.002
+    400084: Cubo.003
+    400086: Cubo.004
+    400088: Cubo.005
+    400090: Cubo.006
+    400092: Cubo.008
+    400094: Cubo.009
+    400096: Cubo.010
+    400098: Cubo.011
+    400100: Cubo.012
+    400102: Cubo.013
+    400104: Cubo.014
+    400106: Cubo.015
+    400108: Cubo.016
+    400110: Cubo.019
+    400112: Cylinder.007
+    400114: Cylinder.010
+    400116: "C\xEDrculo"
+    400118: "C\xEDrculo.003"
+    400120: Lamp
+    400122: Lamp.003
+    400124: Lamp.004
+    400126: mini-torre
+    400128: muro
+    400130: pano
+    400132: parte de cima do muro
+    400134: Plano
+    400136: Plano.001
+    400138: Plano.002
+    400140: Plano.003
+    400142: Ponto
+    400144: Ponto.001
+    400146: //RootNode
+    400148: torre 1.000
+    400150: torre 1.001
+    400152: torre 1.002
+    400154: torre 1.003
+    400156: torre 1.004
+    400158: torre 1.005
+    400160: torre 1.006
+    400162: torre 1.007
+    400164: torre2
+    400166: Torus.000
+    400168: Torus.001
+    400170: Torus.002
+    400172: Torus.003
+    400174: Torus.004
+    400176: Torus.006
+    2300000: Cilindro
+    2300002: Cilindro.000
+    2300004: Cilindro.001
+    2300006: Cilindro.002
+    2300008: Cilindro.003
+    2300010: Cilindro.004
+    2300012: Cilindro.006
+    2300014: Cilindro.007
+    2300016: Cilindro.008
+    2300018: Cilindro.009
+    2300020: Cilindro.010
+    2300022: Cilindro.011
+    2300024: Cilindro.012
+    2300026: Cilindro.013
+    2300028: Cilindro.014
+    2300030: Cliff_MeshPart0
+    2300032: Cliff_MeshPart1
+    2300034: Cliff_MeshPart2
+    2300036: Cone
+    2300038: Cone.000
+    2300040: Cone.001
+    2300042: Cone.002
+    2300044: Cone.003
+    2300046: Cone.004
+    2300048: Cone.005
+    2300050: Cone.006
+    2300052: Cone.007
+    2300054: Cone.008
+    2300056: Cone.009
+    2300058: Cone.010
+    2300060: Cone.011
+    2300062: Cone.012
+    2300064: Cube
+    2300066: Cube.002
+    2300068: Cube.003
+    2300070: Cube.004
+    2300072: Cube.005
+    2300074: Cubo
+    2300076: Cubo.001
+    2300078: Cubo.002
+    2300080: Cubo.003
+    2300082: Cubo.004
+    2300084: Cubo.005
+    2300086: Cubo.006
+    2300088: Cubo.008
+    2300090: Cubo.009
+    2300092: Cubo.010
+    2300094: Cubo.011
+    2300096: Cubo.012
+    2300098: Cubo.013
+    2300100: Cubo.014
+    2300102: Cubo.015
+    2300104: Cubo.016
+    2300106: Cubo.019
+    2300108: Cylinder.007
+    2300110: Cylinder.010
+    2300112: "C\xEDrculo"
+    2300114: "C\xEDrculo.003"
+    2300116: mini-torre
+    2300118: muro
+    2300120: pano
+    2300122: parte de cima do muro
+    2300124: Plano
+    2300126: Plano.001
+    2300128: Plano.002
+    2300130: Plano.003
+    2300132: torre 1.000
+    2300134: torre 1.001
+    2300136: torre 1.002
+    2300138: torre 1.003
+    2300140: torre 1.004
+    2300142: torre 1.005
+    2300144: torre 1.006
+    2300146: torre 1.007
+    2300148: torre2
+    2300150: Torus.000
+    2300152: Torus.001
+    2300154: Torus.002
+    2300156: Torus.003
+    2300158: Torus.004
+    2300160: Torus.006
+    3300000: Cilindro
+    3300002: Cilindro.000
+    3300004: Cilindro.001
+    3300006: Cilindro.002
+    3300008: Cilindro.003
+    3300010: Cilindro.004
+    3300012: Cilindro.006
+    3300014: Cilindro.007
+    3300016: Cilindro.008
+    3300018: Cilindro.009
+    3300020: Cilindro.010
+    3300022: Cilindro.011
+    3300024: Cilindro.012
+    3300026: Cilindro.013
+    3300028: Cilindro.014
+    3300030: Cliff_MeshPart0
+    3300032: Cliff_MeshPart1
+    3300034: Cliff_MeshPart2
+    3300036: Cone
+    3300038: Cone.000
+    3300040: Cone.001
+    3300042: Cone.002
+    3300044: Cone.003
+    3300046: Cone.004
+    3300048: Cone.005
+    3300050: Cone.006
+    3300052: Cone.007
+    3300054: Cone.008
+    3300056: Cone.009
+    3300058: Cone.010
+    3300060: Cone.011
+    3300062: Cone.012
+    3300064: Cube
+    3300066: Cube.002
+    3300068: Cube.003
+    3300070: Cube.004
+    3300072: Cube.005
+    3300074: Cubo
+    3300076: Cubo.001
+    3300078: Cubo.002
+    3300080: Cubo.003
+    3300082: Cubo.004
+    3300084: Cubo.005
+    3300086: Cubo.006
+    3300088: Cubo.008
+    3300090: Cubo.009
+    3300092: Cubo.010
+    3300094: Cubo.011
+    3300096: Cubo.012
+    3300098: Cubo.013
+    3300100: Cubo.014
+    3300102: Cubo.015
+    3300104: Cubo.016
+    3300106: Cubo.019
+    3300108: Cylinder.007
+    3300110: Cylinder.010
+    3300112: "C\xEDrculo"
+    3300114: "C\xEDrculo.003"
+    3300116: mini-torre
+    3300118: muro
+    3300120: pano
+    3300122: parte de cima do muro
+    3300124: Plano
+    3300126: Plano.001
+    3300128: Plano.002
+    3300130: Plano.003
+    3300132: torre 1.000
+    3300134: torre 1.001
+    3300136: torre 1.002
+    3300138: torre 1.003
+    3300140: torre 1.004
+    3300142: torre 1.005
+    3300144: torre 1.006
+    3300146: torre 1.007
+    3300148: torre2
+    3300150: Torus.000
+    3300152: Torus.001
+    3300154: Torus.002
+    3300156: Torus.003
+    3300158: Torus.004
+    3300160: Torus.006
+    4300000: Cliff_MeshPart0
+    4300002: Cliff_MeshPart1
+    4300004: Cliff_MeshPart2
+    4300006: Cubo.019
+    4300008: Cone.007
+    4300010: Cilindro
+    4300012: Cilindro.000
+    4300014: Cilindro.001
+    4300016: Cilindro.002
+    4300018: Cilindro.003
+    4300020: Cilindro.004
+    4300022: Cilindro.006
+    4300024: Cilindro.007
+    4300026: Cilindro.008
+    4300028: Cilindro.009
+    4300030: Cilindro.010
+    4300032: Cilindro.011
+    4300034: Cilindro.012
+    4300036: Cilindro.013
+    4300038: Cilindro.014
+    4300040: Cone
+    4300042: Cone.000
+    4300044: Cone.001
+    4300046: Cone.002
+    4300048: Cone.003
+    4300050: Cone.004
+    4300052: Cone.005
+    4300054: Cone.006
+    4300056: Cone.008
+    4300058: Cone.009
+    4300060: Cone.010
+    4300062: Cone.011
+    4300064: Cone.012
+    4300066: Cube
+    4300068: Cube.002
+    4300070: Cube.003
+    4300072: Cube.004
+    4300074: Cube.005
+    4300076: Cubo
+    4300078: Cubo.001
+    4300080: Cubo.002
+    4300082: Cubo.003
+    4300084: Cubo.016
+    4300086: Cubo.004
+    4300088: Cubo.005
+    4300090: Cubo.006
+    4300092: Cubo.008
+    4300094: Cubo.009
+    4300096: Cubo.010
+    4300098: Cubo.011
+    4300100: Cubo.012
+    4300102: Cubo.013
+    4300104: Cubo.014
+    4300106: Cubo.015
+    4300108: Cylinder.007
+    4300110: Cylinder.010
+    4300112: "C\xEDrculo"
+    4300114: "C\xEDrculo.003"
+    4300116: mini-torre
+    4300118: muro
+    4300120: pano
+    4300122: parte de cima do muro
+    4300124: Plano
+    4300126: Plano.001
+    4300128: Plano.002
+    4300130: Plano.003
+    4300132: torre 1.000
+    4300134: torre 1.001
+    4300136: torre 1.002
+    4300138: torre 1.003
+    4300140: torre 1.004
+    4300142: torre 1.005
+    4300144: torre 1.006
+    4300146: torre 1.007
+    4300148: torre2
+    4300150: Torus.000
+    4300152: Torus.002
+    4300154: Torus.006
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
