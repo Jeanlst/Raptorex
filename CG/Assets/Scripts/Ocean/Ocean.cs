@@ -134,6 +134,26 @@ namespace Ocean
 		/// </summary>
 		WaveSpectrumGPU m_waves;
 
+		/// <summary>
+		/// Mesh object.
+		/// </summary>
+		Mesh m_mesh;
+
+		/// <summary>
+		/// Mesh renderer.
+		/// </summary>
+		MeshRenderer m_meshRenderer;
+
+		/// <summary>
+		/// Mesh Filter.
+		/// </summary>
+		MeshFilter m_meshFilter;
+
+		/// <summary>
+		/// Mesh collider.
+		/// </summary>
+		MeshCollider m_meshCollider;
+
 		void Start()
 		{
 			m_waves = new WaveSpectrumGPU(m_fourierGridSize, m_windSpeed, m_waveAmp, m_inverseWaveAge, m_ansio, m_foamAnsio, m_gridSizes, m_whiteCapStr, m_choppyness);
@@ -149,16 +169,17 @@ namespace Ocean
 				m_bias = 1.0f;
 				Debug.Log("bias must not be less than 1, changing to 1");
 			}
-			
-			Mesh mesh = CreateRadialGrid(m_resolution, m_resolution);
+
+			m_mesh = CreateRadialGrid(m_resolution, m_resolution);
 			
 			float far = Camera.main.farClipPlane;
 			
 			m_grid = new GameObject("Ocean Grid");
-			m_grid.AddComponent<MeshFilter>();
-			m_grid.AddComponent<MeshRenderer>();
+			m_meshFilter = m_grid.AddComponent<MeshFilter>();
+			m_meshRenderer = m_grid.AddComponent<MeshRenderer>();
 			m_grid.GetComponent<Renderer>().material = m_oceanMat;
-			m_grid.GetComponent<MeshFilter>().mesh = mesh;
+			m_grid.GetComponent<MeshFilter>().mesh = m_mesh;
+			m_meshCollider = m_grid.AddComponent<MeshCollider>();
 
 			m_oceanMat.SetVector("_GridSizes", m_waves.gridSizes);
 			m_oceanMat.SetFloat("_MaxLod", m_waves.mipMapLevels);
