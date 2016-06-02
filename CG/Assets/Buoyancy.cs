@@ -11,8 +11,8 @@ using UnityEngine;
 
 public class Buoyancy : MonoBehaviour
 {
-//	public Ocean ocean;
 
+	public float waterLevel = 0;
 	public float density = 500;
 	public int slicesPerAxis = 2;
 	public bool isConcave = false;
@@ -27,11 +27,16 @@ public class Buoyancy : MonoBehaviour
 	private bool isMeshCollider;
 	private List<Vector3[]> forces; // For drawing force gizmos
 
+	private GameObject ocean_grid;
+	private MeshCollider meshCollider;
+
 	/// <summary>
 	/// Provides initialization.
 	/// </summary>
 	private void Start()
 	{
+		ocean_grid = GameObject.FindGameObjectWithTag ("Ocean Grid");
+
 		forces = new List<Vector3[]>(); // For drawing force gizmos
 
 		// Store original rotation and position
@@ -41,14 +46,26 @@ public class Buoyancy : MonoBehaviour
 		transform.position = Vector3.zero;
 
 		// The object must have a collider
-		if (GetComponent<Collider>() == null)
-		{
-			gameObject.AddComponent<MeshCollider>();
-			Debug.LogWarning(string.Format("[Buoyancy.cs] Object \"{0}\" had no collider. MeshCollider has been added.", name));
+		if (GetComponent<Collider> () == null) {
+			meshCollider = gameObject.AddComponent<MeshCollider> ();
+			Debug.LogWarning (string.Format ("[Buoyancy.cs] Object \"{0}\" had no collider. MeshCollider has been added.", name));
+		} else {
+			meshCollider = GetComponent<MeshCollider> ();
 		}
 		isMeshCollider = GetComponent<MeshCollider>() != null;
 
+		if (ocean_grid != null) {
+			meshCollider.sharedMesh = ocean_grid.GetComponent<MeshFilter> ().mesh;
+			meshCollider.convex = ocean_grid.GetComponent<MeshCollider> ().convex;
+		} else {
+			Debug.LogWarning (string.Format ("Ocean Grid is null", name));
+		}
+
+		//GetComponent<Collider> ().bounds.size = Vector3 (GetComponent<Collider> ().bounds.size.x / 2, GetComponent<Collider> ().bounds.size.y / 2, GetComponent<Collider> ().bounds.size.z / 2);
 		var bounds = GetComponent<Collider>().bounds;
+		//bounds.size.y = bounds.size.y / 2;
+		//bounds.size.x = bounds.size.x / 2;
+		//bounds.size.z = bounds.size.z / 2;
 		if (bounds.size.x < bounds.size.y)
 		{
 			voxelHalfHeight = bounds.size.x;
@@ -98,13 +115,12 @@ public class Buoyancy : MonoBehaviour
 
 		if (concave)
 		{
-			var meshCol = GetComponent<MeshCollider>();
-
-			var convexValue = meshCol.convex;
-			meshCol.convex = false;
+			var convexValue = meshCollider.convex;
+			meshCollider.convex = false;
 
 			// Concave slicing
 			var bounds = GetComponent<Collider>().bounds;
+			Debug.LogWarning (string.Format("Min X: {0}, Min Y: {1}, Size X: {2}, Size Y: {3}", GetComponent<Collider> ().bounds.min.x, GetComponent<Collider> ().bounds.min.y, GetComponent<Collider> ().bounds.size.x, GetComponent<Collider> ().bounds.size.y));
 			for (int ix = 0; ix < slicesPerAxis; ix++)
 			{
 				for (int iy = 0; iy < slicesPerAxis; iy++)
@@ -117,7 +133,7 @@ public class Buoyancy : MonoBehaviour
 
 						var p = transform.InverseTransformPoint(new Vector3(x, y, z));
 
-						if (PointIsInsideMeshCollider(meshCol, p))
+						if (PointIsInsideMeshCollider(meshCollider, p))
 						{
 							points.Add(p);
 						}
@@ -129,7 +145,7 @@ public class Buoyancy : MonoBehaviour
 				points.Add(bounds.center);
 			}
 
-			meshCol.convex = convexValue;
+			meshCollider.convex = convexValue;
 		}
 		else
 		{
@@ -242,7 +258,7 @@ public class Buoyancy : MonoBehaviour
 	private float GetWaterLevel(float x, float z)
 	{
 //		return ocean == null ? 0.0f : ocean.GetWaterHeightAtLocation(x, z);
-		return 0.0f;
+		return waterLevel;
 	}
 
 	/// <summary>

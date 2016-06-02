@@ -157,7 +157,7 @@ namespace Ocean
 		void Start()
 		{
 			m_waves = new WaveSpectrumGPU(m_fourierGridSize, m_windSpeed, m_waveAmp, m_inverseWaveAge, m_ansio, m_foamAnsio, m_gridSizes, m_whiteCapStr, m_choppyness);
-			
+
 			if (m_resolution * m_resolution >= 65000)
 			{
 				m_resolution = (int)Mathf.Sqrt(65000);
@@ -172,14 +172,19 @@ namespace Ocean
 
 			m_mesh = CreateRadialGrid(m_resolution, m_resolution);
 			
-			float far = Camera.main.farClipPlane;
+			//float far = Camera.main.farClipPlane;
 			
 			m_grid = new GameObject("Ocean Grid");
+			m_grid.gameObject.tag = "Ocean Grid";
+			m_grid.transform.parent = this.gameObject.transform;
 			m_meshFilter = m_grid.AddComponent<MeshFilter>();
 			m_meshRenderer = m_grid.AddComponent<MeshRenderer>();
 			m_grid.GetComponent<Renderer>().material = m_oceanMat;
 			m_grid.GetComponent<MeshFilter>().mesh = m_mesh;
 			m_meshCollider = m_grid.AddComponent<MeshCollider>();
+			m_meshCollider.sharedMesh = m_mesh;
+			m_meshCollider.convex = true;
+
 
 			m_oceanMat.SetVector("_GridSizes", m_waves.gridSizes);
 			m_oceanMat.SetFloat("_MaxLod", m_waves.mipMapLevels);
